@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <title>ThyncWiki</title>
+
+    <style type="text/css" media="screen">
+#wiki-app.editing #article-rendered, #wiki-app.editing #article-name {
+  display: none;
+}
+
+#wiki-app #article-source, #wiki-app #article-name-edit {
+  display: none;
+}
+
+#wiki-app.editing #article-source, #wiki-app.editing #article-name-edit {
+  display: block;
+}
+
+#wiki-app .wiki-word {
+  text-decoration: underline;
+}
+    </style>
+    <script src="node_modules/marked/marked.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/dropbox.js/0.10.2/dropbox.min.js">
+</script>
+  </head>
+  <body>
+    <div id='wiki-app'>
+      <input type="text" name="article-name" id="article-name-edit" value="">
+      <h1 id='article-name'></h1>
+      <textarea name="article" rows="8" cols="40" id='article-source'></textarea>
+      <div id='article-rendered'></div>
+      <br>
+      <button id='article-action-button'>Edit</button>
+    </div>
+
+    <script src="thyncwiki.js" type="text/javascript" charset="utf-8"></script>
+  </body>
+
+</html>
